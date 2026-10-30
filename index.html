@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170b20">
+<title>ZR ZUBAYER24 | শুভ জন্মদিন, রাবেয়া ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+ --pink:#ff8fb8;
+ --rose:#ffbfd3;
+ --gold:#f8d9a0;
+}
+
+* { box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+ margin:0;
+ background:
+ radial-gradient(ellipse at 15% 10%,#48203f 0,transparent 35%),
+ radial-gradient(ellipse at 90% 35%,#24204d 0,transparent 34%),
+ linear-gradient(145deg,#100916,#1b1024 55%,#100916);
+ color:white;
+ font-family:'Hind Siliguri',sans-serif;
+ overflow-x:hidden;
+}
+
+body:before {
+ content:"";
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ opacity:.18;
+ background-image:radial-gradient(#fff 1px,transparent 1px);
+ background-size:43px 43px;
+ z-index:0;
+}
+
+button { font:inherit; }
+
+/* MUSIC */
+#birthdaySong { display:none; }
+
+/* ENTRY SCREEN */
+#gate {
+ position:fixed;
+ inset:0;
+ z-index:10;
+ display:grid;
+ place-items:center;
+ padding:22px;
+ background:linear-gradient(145deg,rgba(16,9,22,.97),rgba(49,20,48,.97));
+ transition:opacity .8s,visibility .8s;
+}
+
+#gate.hide {
+ opacity:0;
+ visibility:hidden;
+}
+
+.gate-card {
+ width:min(540px,100%);
+ text-align:center;
+ padding:42px 28px;
+ border:1px solid #ffffff25;
+ border-radius:30px;
+ background:linear-gradient(145deg,#ffffff13,#ffffff05);
+ box-shadow:0 25px 90px #0008;
+ backdrop-filter:blur(18px);
+ animation:rise 1s ease both;
+}
+
+.cake {
+ font-size:55px;
+ filter:drop-shadow(0 0 18px #ff9fc4);
+}
+
+.eyebrow {
+ letter-spacing:4px;
+ text-transform:uppercase;
+ color:var(--gold);
+ font:12px 'Playfair Display',serif;
+ margin:12px 0;
+}
+
+.gate-card h1 {
+ font-size:clamp(30px,7vw,48px);
+ line-height:1.2;
+ margin:8px 0;
+ color:#ffd5e3;
+}
+
+.gate-card p {
+ color:#e9cbd9;
+ font-size:16px;
+}
+
+.open-btn {
+ border:0;
+ border-radius:999px;
+ padding:14px 28px;
+ margin-top:16px;
+ color:#35152b;
+ font-weight:700;
+ background:linear-gradient(100deg,#ffd1df,#f5c98f);
+ box-shadow:0 8px 30px #ff9fc455;
+ cursor:pointer;
+ transition:.25s;
+}
+
+.open-btn:hover {
+ transform:translateY(-3px) scale(1.03);
+ box-shadow:0 12px 35px #ff9fc477;
+}
+
+/* MAIN */
+main {
+ position:relative;
+ z-index:1;
+ max-width:900px;
+ margin:auto;
+ padding:55px 20px 90px;
+}
+
+.hero {
+ text-align:center;
+ min-height:70vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ position:relative;
+}
+
+.hero .small {
+ color:var(--gold);
+ letter-spacing:4px;
+ font:13px 'Playfair Display',serif;
+ text-transform:uppercase;
+}
+
+.hero h1 {
+ font-size:clamp(44px,10vw,88px);
+ line-height:1.12;
+ margin:16px 0 10px;
+ background:linear-gradient(100deg,#fff1f6,#ff9fbe 48%,#f8d9a0);
+ -webkit-background-clip:text;
+ background-clip:text;
+ color:transparent;
+ text-shadow:0 10px 50px #ff8fb833;
+}
+
+.hero .subtitle {
+ font:clamp(16px,3vw,21px) 'Playfair Display',serif;
+ color:#f6dce7;
+}
+
+.hero-heart {
+ font-size:44px;
+ margin-top:24px;
+ animation:pulse 1.7s infinite;
+}
+
+.scroll-hint {
+ position:absolute;
+ bottom:12px;
+ color:#d6b9ca;
+ font-size:13px;
+ opacity:.8;
+}
+
+.section-label {
+ text-align:center;
+ color:var(--gold);
+ font:12px 'Playfair Display',serif;
+ letter-spacing:4px;
+ text-transform:uppercase;
+ margin:20px 0;
+}
+
+.letter {
+ position:relative;
+ padding:clamp(23px,5vw,48px);
+ border:1px solid #ffffff22;
+ border-radius:28px;
+ background:linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.035));
+ box-shadow:0 22px 80px #0005;
+ backdrop-filter:blur(14px);
+ overflow:hidden;
+}
+
+.letter:before {
+ content:"♡";
+ position:absolute;
+ right:18px;
+ top:-34px;
+ font:150px Georgia;
+ color:#ff9fbe12;
+}
+
+.letter p {
+ position:relative;
+ color:#f6e7ee;
+ font-size:clamp(16px,2.2vw,18px);
+ line-height:2.05;
+ margin:0 0 22px;
+}
+
+.letter p:last-child { margin-bottom:0; }
+
+.letter .opening {
+ font-size:clamp(20px,3vw,25px);
+ font-weight:700;
+ color:#ffd1df;
+ line-height:1.8;
+}
+
+.letter .highlight {
+ color:#ffd1df;
+ font-weight:600;
+}
+
+.signature {
+ text-align:right;
+ color:#ffd1df;
+ font-size:22px;
+ margin-top:34px!important;
+}
+
+.footer {
+ text-align:center;
+ padding:55px 10px 20px;
+ color:#d8bdcb;
+}
+
+.footer .big {
+ font:clamp(24px,5vw,38px) 'Playfair Display',serif;
+ color:#ffd1df;
+ margin:12px 0;
+}
+
+.footer .tiny {
+ font-size:13px;
+ letter-spacing:2px;
+ color:#cbaabb;
+}
+
+/* FLOATING EFFECT */
+.floating {
+ position:fixed;
+ bottom:-40px;
+ z-index:0;
+ pointer-events:none;
+ animation:floatUp linear forwards;
+ opacity:.7;
+}
+
+@keyframes rise {
+ from {opacity:0;transform:translateY(25px) scale(.97)}
+ to {opacity:1;transform:none}
+}
+
+@keyframes pulse {
+ 50% {
+  transform:scale(1.2);
+  filter:drop-shadow(0 0 18px #ff6fa5);
+ }
+}
+
+@keyframes floatUp {
+ to {
+  transform:translateY(-110vh) rotate(35deg);
+  opacity:0;
+ }
+}
+
+@media(max-width:600px) {
+ main {padding:25px 14px 60px}
+ .hero {min-height:65vh}
+ .letter {border-radius:21px}
+ .letter p {line-height:1.9}
+ .gate-card {padding:35px 20px}
+}
+
+@media(prefers-reduced-motion:reduce) {
+ *,*:before,*:after {
+  scroll-behavior:auto!important;
+  animation:none!important;
+  transition:none!important;
+ }
+}
+</style>
+</head>
+
+<body>
+
+<!-- YOUR SONG: KEEP song.mp3 BESIDE index.html -->
+<audio id="birthdaySong" autoplay loop preload="auto">
+ <source src="song.mp3" type="audio/mpeg">
+ Your browser does not support audio playback.
+</audio>
+
+<!-- ENTRY SCREEN -->
+<div id="gate">
+ <div class="gate-card">
+
+  <div class="cake">🎂</div>
+
+  <div class="eyebrow">
+   ZR ZUBAYER24 • A LITTLE SURPRISE
+  </div>
+
+  <h1>For my favorite person</h1>
+
+  <p>
+   বউ জান,কলিজা আমার, তোমার জন্য ছোট্ট একটা ভালোবাসার সারপ্রাইজ… ❤️
+  </p>
+
+  <button class="open-btn" id="openBtn">
+   Open your surprise ✨
+  </button>
+
+ </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+
+ <div class="small">
+  A Special Day • A Special Soul
+ </div>
+
+ <h1>
+  শুভ জন্মদিন<br>
+  আমার রাবেয়া
+ </h1>
+
+ <div class="subtitle">
+  To my favorite person, with all my heart
+ </div>
+
+ <div class="hero-heart">
+  🎂 ❤️ 🫀
+ </div>
+
+ <div class="scroll-hint">
+  একটু নিচে এসো… তোমার জন্য কিছু কথা আছে ↓
+ </div>
+
+</section>
+
+<div class="section-label">
+ A Letter From My Heart
+</div>
+
+<!-- BIRTHDAY LETTER -->
+<article class="letter">
+
+<p class="opening">
+🎂❤️ শুভ জন্মদিন বউ জান,কলিজা আমার, আমার রাবেয়া… 🫀❤️‍🩹
+<br>
+Many many happy returns of the day, my favorite person…! 🥹❤️
+</p>
+
+<p>
+আজ তোমার জন্মদিন, তবে তোমার থেকে আমি মনে হয় একটু বেশি খুশি, কারণ আজ সেই মানুষটার জন্মদিন, যাকে আমি আমার জীবনের চেয়েও বেশি ভালোবেসে ফেলেছি। 🥰🫀 জানিনা কীভাবে, কখন, কোন মুহূর্তে তোমাকে এতটা ভালোবেসে ফেলেছি। শুধু এটুকু জানি, তোমাকে আমি যতবার বলি “ভালোবাসি”, তার থেকেও অনেক অনেক বেশি ভালোবাসি তোমাকে। ❤️‍🩹 কি আজব তাই না…? 🫠😅
+</p>
+
+<p>
+তোমার আর আমার দূরত্ব বেশি না,কত কথা জমে থাকে মনে, কত কিছু বলতে ইচ্ছে করে, অথচ সব সময় বলা হয়ে ওঠে না। 💔🥹
+</p>
+
+<p>
+প্রথম যেদিন তোমার হাতটা ধরেছিলাম, সেদিনই বুঝতে পেরেছিলাম—তোমাকে আমার লাগবেই। 🫶🏻❤️ সেদিন হয়তো বুঝিনি, তুমি আমার জীবনের এতটা জায়গা জুড়ে থাকবে। তুমি মানুষটা যে কীভাবে এতটা প্রিয় হয়ে উঠলে, তা আমি নিজেও জানি না। শুধু জানি, তোমাকে ছাড়া আমার ভাবনাগুলো অসম্পূর্ণ থেকে যায়। 🥺🫀
+</p>
+
+<p>
+রাবেয়া, তোমার হাসিটা আমার কাছে অনেক মূল্যবান। তোমার একটু ভালো থাকা, একটু হাসি, একটু খুশি—এসবই আমার কাছে অনেক বড় কিছু। তোমার মন খারাপ হলে আমারও ভালো লাগে না। তোমার কষ্টগুলো যদি নিজের করে নিতে পারতাম, তাহলে হয়তো তোমাকে একটু বেশি হাসিখুশি রাখতে পারতাম। ❤️‍🩹🌸
+</p>
+
+<p>
+তবে এই বিশেষ দিনে আল্লাহর কাছে একটাই দোয়া করি, আল্লাহ যেন আমাদের ভালোবাসার সম্পর্কটাকে একদিন হালাল পরিণতি দান করেন। 🤲🏻❤️ ভবিষ্যতে কী হবে, তা আমি জানি না। আমাদের জীবনে কী অপেক্ষা করছে, সেটাও জানি না। তবে একটা কথা জানি—আমার তোমাকে লাগবে, রাবেয়া। 🥹🫀
+</p>
+
+<p>
+তোমাকে নিয়েই আমার ভবিষ্যতের স্বপ্নগুলো সাজাতে চাই। তোমার সাথে জীবনের সুন্দর মুহূর্তগুলো ভাগ করে নিতে চাই। একদিন যেন সব বাধা পেরিয়ে তোমাকে আমার জীবনের সঙ্গী হিসেবে পেতে পারি। আল্লাহ যেন আমাদের দুজনকে একে অপরের জন্য উত্তম করে দেন এবং আমাদের একসঙ্গে থাকার পথটা সহজ করে দেন। আমিন। 🤍🤲🏻
+</p>
+
+<p>
+আমাদের এখন কথা বলাটাও অনেক কঠিন হয়ে গেছে। কত কথা জমে থাকে মনে, কত কিছু বলতে ইচ্ছে করে, অথচ সব সময় বলা হয়ে ওঠে না। 🥺❤️‍🩹 তবুও আমি বিশ্বাস করি, আল্লাহ যা করেন, ভালোর জন্যই করেন। হয়তো এই অপেক্ষারও একটা সুন্দর পরিণতি আছে। তাই সবকিছু আল্লাহর ওপর ছেড়ে দিয়েছি। শুধু দোয়া করি, একদিন যেন সব বাধা পেরিয়ে আমরা আমাদের ভালোবাসার মানুষটাকে হালালভাবে নিজের করে নিতে পারি। 🤲🏻🕊️
+</p>
+
+<p>
+তবে তুমি কখনো আশা হারিয়ো না, বউ জান,কলিজা আমার। 🥹❤️ এই জুবায়ের রাবেয়ার আছে এবং ইনশাআল্লাহ আজীবন থাকবে। 🫀 সময় যতই কঠিন হোক, পরিস্থিতি যতই বদলে যাক, তোমার প্রতি আমার ভালোবাসা আর তোমাকে নিয়ে দেখা স্বপ্নগুলো কখনো বদলাবে না। তুমি শুধু বিশ্বাস রেখো, একদিন সবকিছু সুন্দর হবে। 🌸🤍
+</p>
+
+<p>
+আজ তোমার জন্মদিন, তাই তোমার জন্য অনেক অনেক দোয়া করি। আল্লাহ যেন তোমার জীবনের প্রতিটি দিন সুন্দর করে দেন। তোমার সব স্বপ্ন পূরণ করেন, তোমার মুখের হাসিটা যেন কখনো হারিয়ে না যায়। তুমি যেন জীবনে অনেক সুখী হও, অনেক ভালো থাকো, আর তোমার জীবনে যেন কোনো কষ্ট না আসে। 🤲🏻❤️
+</p>
+
+<p class="opening">
+Happy Birthday, My Dear Rabeya…! 🎂🫶🏻
+</p>
+
+<p>
+তুমি শুধু আমার ভালোবাসা নও, তুমি আমার জীবনের সবচেয়ে সুন্দর অনুভূতি, আমার মনের গভীরে লুকিয়ে থাকা এক সুন্দর স্বপ্ন। 🥹🫀 আমার সবচেয়ে বড় Wish হলো—আল্লাহ যেন তোমাকে আমার ভাগ্যে লিখে দেন। যেন একদিন তোমার জন্মদিনে তোমার পাশে বসে তোমাকে বলতে পারি, “শুভ জন্মদিন বউ জান,কলিজা আমার, তুমি আমার জীবনের সবচেয়ে সুন্দর পাওয়া।” ❤️‍🩹
+</p>
+
+<p class="highlight">
+ভালোবাসি তোমাকে, রাবেয়া। আজ, আগামীকাল, আর যতদিন আল্লাহ আমাদের জীবন দেন…! 🥹❤️🫀
+</p>
+
+<p class="signature">
+— তোমার জুবায়ের 🌸🕊️
+</p>
+
+</article>
+
+<footer class="footer">
+
+ <div class="big">
+  May Allah bless every chapter of your life. 🤍
+ </div>
+
+ <div>
+  তোমার প্রতিটি দিন হোক হাসি, শান্তি আর ভালোবাসায় ভরা।
+ </div>
+
+ <div class="tiny">
+  ZR ZUBAYER24 • MADE WITH LOVE • ONLY FOR RABEYA
+ </div>
+
+</footer>
+
+</main>
+
+<script>
+const gate = document.getElementById('gate');
+const song = document.getElementById('birthdaySong');
+const openBtn = document.getElementById('openBtn');
+
+// Try autoplay when the website loads.
+// Browsers may block autoplay with sound.
+window.addEventListener('load', () => {
+    song.volume = 0.75;
+
+    const playAttempt = song.play();
+
+    if (playAttempt !== undefined) {
+        playAttempt.catch(() => {
+            console.log("Autoplay blocked. Waiting for user interaction.");
+        });
+    }
+});
+
+// Reliable music start after clicking the entry button.
+openBtn.addEventListener('click', () => {
+
+    song.play().catch(error => {
+        console.log("Music could not start:", error);
+    });
+
+    gate.classList.add('hide');
+
+    document.body.style.overflowY = 'auto';
+
+    setTimeout(() => {
+        gate.remove();
+    }, 900);
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+});
+
+// Floating hearts and flowers.
+const symbols = ['❤️','💗','🌸','✨','🫀','🤍'];
+
+function makeFloat() {
+
+    const el = document.createElement('div');
+
+    el.className = 'floating';
+
+    el.textContent =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+    el.style.left = Math.random() * 100 + 'vw';
+
+    el.style.fontSize =
+        (14 + Math.random() * 19) + 'px';
+
+    const duration = 8 + Math.random() * 8;
+
+    el.style.animationDuration = duration + 's';
+
+    document.body.appendChild(el);
+
+    setTimeout(() => {
+        el.remove();
+    }, duration * 1000);
+}
+
+setInterval(makeFloat, 850);
+
+// Keep the entry screen visible until the surprise is opened.
+document.body.style.overflow = 'hidden';
+
+</script>
+
+</body>
+</html>
